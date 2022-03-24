@@ -9,20 +9,30 @@ import Button from '@mui/material/Button';
 export const AppHeader = () => {
     return (
         <header>
-        <Box sx={{ flexGrow: 1}}>
-            <AppBar position="static"
-                sx={{backgroundColor: '#343a40'}}
-            >
-                <Toolbar>
-                    <Typography variant="h4" component="div" sx={{ flexGrow: 1 }}>
-                        CarLogo
-                    </Typography>
-                    <Button color="inherit">По алфавиту</Button>
-                    <Button color="inherit">По странам</Button>
-                </Toolbar>
-            </AppBar>
-        </Box>
-</header>
+            <Box sx={{ flexGrow: 1 }}>
+                <AppBar position="static"
+                    sx={{ backgroundColor: '#343a40' }}
+                >
+                    <Toolbar>
+                        <Typography variant="h4" component="div" sx={{ flexGrow: 1, cursor: 'default' }}>
+                            CarLogo
+                        </Typography>
+                        <Button sx={{
+                            color: '#ababac', 
+                            '&:hover': {
+                                color: "inherit"}
+                        }}>
+                        По алфавиту</Button>
+                        <Button sx={{
+                            color: '#ababac', 
+                            '&:hover': {
+                                color: "inherit"}
+                        }}>
+                        По странам</Button>
+                    </Toolbar>
+                </AppBar>
+            </Box>
+        </header>
     )
 }
 
