@@ -7,9 +7,11 @@ import Brand from './brand.js';
 ReactDOM.render(
   <React.StrictMode>
     <App />
+    {/*
+    вытаскивай то, с чем хочешь рабоать
+      <App />
+      <Brand />
+    */}
   </React.StrictMode>,
   document.getElementById('root')
 );
-
-// <App /> 
-// <Brand />

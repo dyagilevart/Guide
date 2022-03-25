@@ -1,10 +1,10 @@
 import React from 'react';
-import { AppHeader} from './components/header'
+import {AppHeader} from './components'
 
 import 'bootstrap/dist/css/bootstrap.css';
 import './css/brand.css';
 
-function Brand() {
+export default function Brand() {
   return (
     <div>
         <AppHeader />
@@ -23,8 +23,6 @@ function Brand() {
         <div className="card">
             <div>
                 <h1 id="title">Марка </h1>
-                <img id="img" />
-                <table className="table" id="table"></table>
             </div>
         </div>
     </div>
@@ -43,5 +41,3 @@ function Brand() {
     </div>
   );
 }
-
-export default Brand;
