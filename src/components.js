@@ -10,25 +10,20 @@ export const AppHeader = () => {
     return (
         <header>
             <Box sx={{ flexGrow: 1 }}>
-                <AppBar position="static"
-                    sx={{ backgroundColor: '#343a40' }}
-                >
+                <AppBar position="static" sx={{ backgroundColor: '#343a40' }}>
                     <Toolbar>
                         <Typography variant="h4" component="div" sx={{ flexGrow: 1, cursor: 'default' }}>
                             CarLogo
                         </Typography>
+                        {/*Button - sql запросы. Сортируют и раскидывают бд по блокам*/}
                         <Button sx={{
                             color: '#ababac',
-                            '&:hover': {
-                                color: "inherit"
-                            }
+                            '&:hover': {color: "inherit"}
                         }}>
                             По алфавиту</Button>
                         <Button sx={{
                             color: '#ababac',
-                            '&:hover': {
-                                color: "inherit"
-                            }
+                            '&:hover': {color: "inherit"}
                         }}>
                             По странам</Button>
                     </Toolbar>
@@ -60,6 +55,7 @@ export const AppFooter = () => {
     return (
         <footer>
             <div>
+                {/* Возвращает на Add */}
                 © 2021 <a href="index.html">CarLogo</a>. Все права на опубликованные изображения принадлежат их авторам или законным владельцам.
             </div>
         </footer>

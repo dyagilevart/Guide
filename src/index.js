@@ -6,7 +6,7 @@ import Brand from './brand.js';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Brand />
     {/*
     вытаскивай то, с чем хочешь рабоать
       <App />
