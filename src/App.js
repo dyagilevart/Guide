@@ -1,20 +1,21 @@
 import React from 'react';
-import {
-  AppHeader, 
-  AppTypeSort, 
-  AppFooter} 
-from './components'
+import styled from 'styled-components'
 
-import './css/App.css';
+import {AppHeader} from './components/header'
+import {AppTypeSort} from './components/type-of-sorting'
+import {AppFooter} from './components/footer'
+import BasicGrid from './components/grid'
 
 
 export default function App() {
   return (
-    <div>
+    <>
       <AppHeader />
       <AppTypeSort />
       {/* Список иконок с марками */}
+      <BasicGrid />
       <AppFooter />
-    </div>
+    </>
   );
 }
+//  background-color: #f3f3f3;

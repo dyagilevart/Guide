@@ -33,31 +33,38 @@ export const AppHeader = () => {
     )
 }
 
-export const AppTypeSort = () => {
+/*
+import {
+    Routes,
+    Route,
+} from "react-router-dom";
+
+export function BasicExample() {
     return (
-        <Box
-            sx={{
-                backgroundColor: '#e9ecef',
-                padding: '40px 10px 20px 15px',
-                fontWeight: 200,
-                cursor: 'default'
-            }}
-        >
-            <Typography variant="h4" component="div" sx={{ flexGrow: 1 }}>
-                Перечень автомобильных марок
-            </Typography>
-            <p>{/*<p>{typeOfSorting}</p>*/}в алфавитном порядке</p>
-        </Box>
-    )
+      <div>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/brand" element={<Brand />} />
+        </Routes>
+      </div>
+    );
+  }
+
+
+function Home() {
+    return (
+        <div>
+            <h2>Дом</h2>
+        </div>
+    );
 }
 
-export const AppFooter = () => {
+function Brand() {
     return (
-        <footer>
-            <div>
-                {/* Возвращает на Add */}
-                © 2021 <a href="index.html">CarLogo</a>. Все права на опубликованные изображения принадлежат их авторам или законным владельцам.
-            </div>
-        </footer>
-    )
+        <div>
+            <h2>страны</h2>
+        </div>
+    );
 }
+
+*/
