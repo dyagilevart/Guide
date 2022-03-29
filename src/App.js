@@ -1,41 +1,36 @@
 import React, { useEffect, useState } from 'react';
-import styled from 'styled-components'
 
 import firebase from './firebase';
-import {AppHeader} from './components/header'
-import {AppTypeSort} from './components/type-of-sorting'
-import {AppFooter} from './components/footer'
-import BasicGrid from './components/grid'
-
+import { AppHeader } from './components/header';
+import { AppTypeSort } from './components/type-of-sorting';
+import { AppFooter } from './components/footer';
 
 export default function App() {
-
   const [Logos, setLogos] = useState([]);
   const [loading, setLoading] = useState(false);
 
-  const ref = firebase.firestore().collection("Logos");
+  const ref = firebase.firestore().collection('Logos');
   console.log(ref);
 
-function getLogos() {
-  setLoading(true);
-  ref.onSnapshot((querySnapshot) => {
-    const items = [];
-    querySnapshot.forEach((doc) => {
-      items.push(doc.data());
+  function getLogos() {
+    setLoading(true);
+    ref.onSnapshot((querySnapshot) => {
+      const items = [];
+      querySnapshot.forEach((doc) => {
+        items.push(doc.data());
+      });
+      setLogos(items);
+      setLoading(false);
     });
-    setLogos(items);
-    setLoading(false);
-  });
-}
+  }
 
-useEffect(() => {
-  getLogos();
-}, []);
+  useEffect(() => {
+    getLogos();
+  }, []);
 
-
-if (loading) {
-  return <h1>loading...</h1>;
-}
+  if (loading) {
+    return <h1>loading...</h1>;
+  }
 
   return (
     <>
@@ -48,7 +43,7 @@ if (loading) {
           <p>{logo.country}</p>
         </div>
       ))}
-      
+
       <AppFooter />
     </>
   );

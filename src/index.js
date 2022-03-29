@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
-import Brand from './brand.js';
+import initFirebase from './firebase';
 
-import styled, { createGlobalStyle } from 'styled-components'
+import { createGlobalStyle } from 'styled-components';
 
 const Global = createGlobalStyle`
 *,
@@ -12,7 +12,6 @@ const Global = createGlobalStyle`
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-   /*font-family: "Roboto","Helvetica","Arial",sans-serif;  'Segoe UI';*/
   font-family: 'Montserrat', sans-serif;
 
 }
@@ -21,7 +20,9 @@ body {
   background: #f3f3f3;
 }
 
-`
+`;
+
+initFirebase();
 
 ReactDOM.render(
   <>
