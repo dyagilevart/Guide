@@ -1,7 +1,7 @@
 import React from 'react';
 import {AppHeader} from './components/header'
 
-import 'bootstrap/dist/css/bootstrap.css';
+
 import './css/brand.css';
 
 export default function Brand() {
